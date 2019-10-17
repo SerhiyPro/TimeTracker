@@ -3,12 +3,12 @@ import json
 import datetime
 import sys
 
-from app.osAbstract import Os
+from app.os_abstract import Os
 from activity import ActivityList, TimeEntry, Activity
 
 
 class OsFactory:
-    browsers = ('Google Chrome', 'Mozilla Firefox')
+    browsers = ('Google Chrome', 'Mozilla Firefox', 'Microsoft Edge')
 
     def __init__(self):
         self.active_window_name = ""
@@ -61,7 +61,7 @@ class OsFactory:
         while True:
             new_window_name = self.os.get_active_window()
             if new_window_name and any(browser in new_window_name for browser in self.browsers):
-                new_window_name = self.os.get_browser_url()
+                new_window_name = self.os.get_browsers_tab()
 
             if self.active_window_name != new_window_name:
                 print(''.join(self.active_window_name) if type(self.active_window_name) is list else
