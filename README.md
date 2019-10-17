@@ -3,7 +3,8 @@ Cross-platform script that allows you to track time spent on different programs,
 ## Getting Started
 
 ### Prerequisites
-Ensure you've got python(at least 3.6) and pip installed
+Ensure you've got python(at least 3.6) and pip installed.
+
 Use pip (package manager) to install all requirements from requirements files
 
 For windows
