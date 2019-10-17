@@ -1,5 +1,5 @@
 import sys
-from app.osfactory import OsFactory
+from app.os_factory import OsFactory
 
 
 if __name__ == '__main__':
