@@ -3,7 +3,7 @@ This module is used for linux-based systems
 """
 import subprocess
 import re
-from app.osAbstract import Os
+from app.os_abstract import Os
 
 
 class Linux(Os):
@@ -30,13 +30,7 @@ class Linux(Os):
             return
         return full_window_name.split(" - ")
 
-    def get_active_window_title(self):
-        """
-        :return: the title of current active window
-        """
-        return self.get_active_window()[-1]
-
-    def get_browser_url(self):
+    def get_browsers_tab(self):
         """
         :return: the representation of current url
         """
@@ -47,5 +41,6 @@ class Linux(Os):
         browsers_tab_full_info.pop()
         if not browsers_tab_full_info:
             return
-        return 'Web browser: ' + "/".join(browsers_tab_full_info[::-1])
+        web_page_info = ''.join(browsers_tab_full_info[::-1])
+        return f'Web browser: {web_page_info}'
 

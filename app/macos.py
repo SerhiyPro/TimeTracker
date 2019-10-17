@@ -3,7 +3,7 @@ This module is used for macOS systems
 """
 from AppKit import NSWorkspace
 from Foundation import NSAppleScript
-from app.osAbstract import Os
+from app.os_abstract import Os
 
 
 class MacOs(Os):
@@ -11,16 +11,9 @@ class MacOs(Os):
         """
         :return: the current working window
         """
-        return NSWorkspace.sharedWorkspace().activeApplication()
+        return NSWorkspace.sharedWorkspace().activeApplication()['NSApplicationName']
 
-    def get_active_window_title(self):
-        """
-        :return: the title of current active window
-        """
-        current_window = self.get_active_window()
-        return current_window['NSApplicationName']
-
-    def get_browser_url(self):
+    def get_browsers_tab(self):
         """
         :return: the representation of current url
         """
@@ -28,5 +21,6 @@ class MacOs(Os):
         s = NSAppleScript.initWithSource_(
             NSAppleScript.alloc(), text_of_my_script)
         results, err = s.executeAndReturnError_(None)
-        return 'Web browser: ' + "/" + results.stringValue()
+        web_page_info = results.stringValue()
+        return f'Web browser: {web_page_info}'
 
