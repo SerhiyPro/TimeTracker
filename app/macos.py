@@ -22,5 +22,4 @@ class MacOs(Os):
             NSAppleScript.alloc(), text_of_my_script)
         results, err = s.executeAndReturnError_(None)
         web_page_info = results.stringValue()
-        return f'Web browser: {web_page_info}'
-
+        return 'Web browser: {}'.format(web_page_info)

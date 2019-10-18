@@ -1,3 +1,4 @@
+from __future__ import print_function
 import time
 import json
 import datetime
@@ -22,7 +23,7 @@ class OsFactory:
     def initialize_active_list(self):
         try:
             self.active_list.initialize_me()
-        except FileNotFoundError:
+        except Exception:
             print('Json file not provided')
 
     @staticmethod
@@ -75,4 +76,3 @@ class OsFactory:
                 self.active_window_name = new_window_name
 
             time.sleep(1)
-
