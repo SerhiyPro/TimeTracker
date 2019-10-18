@@ -3,7 +3,7 @@ Cross-platform script that allows you to track time spent on different programs,
 ## Getting Started
 
 ### Prerequisites
-Ensure you've got python(at least 3.6) and pip installed.
+Ensure you've got python and pip installed.
 
 Use pip (package manager) to install all the requirements from requirements files:
 
@@ -17,18 +17,18 @@ pip3 install -r linux-requirements.txt
 ```
 For macos systems
 ```
-pip3 install -r macos-requirements.txt
+pip install -r macos-requirements.txt
 ```
 
 ## Running
 
 Run run.py file
 
-For windows:
+For windows, macos:
 ```
 python run.py
 ```
-For unix-like operating systems:
+For linux operating systems:
 ```
 python3 run.py
 ```
