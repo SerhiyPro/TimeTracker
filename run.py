@@ -8,4 +8,3 @@ if __name__ == '__main__':
         os_f.run()
     except KeyboardInterrupt:
         sys.exit()
-

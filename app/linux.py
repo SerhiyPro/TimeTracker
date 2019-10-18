@@ -41,6 +41,6 @@ class Linux(Os):
         browsers_tab_full_info.pop()
         if not browsers_tab_full_info:
             return
-        web_page_info = ''.join(browsers_tab_full_info[::-1])
+        web_page_info = ' '.join(browsers_tab_full_info[::-1])
         return f'Web browser: {web_page_info}'
 
